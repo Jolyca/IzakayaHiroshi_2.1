@@ -1,0 +1,9 @@
+/*[ STRUCTURE GÉNÉRALE DE LA PAGE ]*/
+/* ------------------------------------------------------------ */
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+

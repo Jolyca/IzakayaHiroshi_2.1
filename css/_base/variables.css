@@ -1,0 +1,22 @@
+/*[ VARIABLES DU PROJET ]*/
+/* ------------------------------------------------------------ */
+:root{
+    /*[ COULEURS ]*/
+    --blanc: #FFFFFF;
+    --noir : #000000;
+    --vertFonce : #397362;
+    --vert : #58A697;
+    --vertPale : #93BFB3;
+    --beigeFonce : #BFAB93;
+    --beige : #F2E8C9;
+    --beigePale : #F2DEC4;
+    --orangeFonce : #BF705E;
+    --orange : #F29979;
+    --orangePale : #F2B8A1;
+    --roseFonce : #BF5656;
+    --rose : #F28379;
+    --rosePale : #F2A9A2;
+    --rougeFonce : #8C3030;
+    --rouge : #BF3F3F;
+    --rougePale : #D98F8F;
+}
