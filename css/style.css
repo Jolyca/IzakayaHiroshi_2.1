@@ -6,6 +6,7 @@
 
 /*[ importation du dossier _composant ]*/
 @import url('_composant/header.css');
+@import url('_composant/footer.css');
 
 /*[ importation du dossier _layout ]*/
 @import url('_layout/structure.css');
