@@ -1,0 +1,12 @@
+/* /////////////////////////////////////////////////////*/
+/*[ importation du dossier _base ]*/
+@import url('_base/variables.css');
+@import url('_base/reset.css');
+@import url('_base/typo.css');
+
+/*[ importation du dossier _composant ]*/
+
+/*[ importation du dossier _layout ]*/
+@import url('_layout/structure.css');
+
+/* /////////////////////////////////////////////////////*/

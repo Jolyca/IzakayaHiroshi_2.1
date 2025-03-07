@@ -1,0 +1,16 @@
+/*[ TYPOGRAPHIES ]*/
+/* ------------------------------------------------------------ */
+@font-face {
+    font-family: 'Exo2';
+    src: url('../../assets/fonts/Exo2-VariableFont_wght.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GeosansLight';
+    src: url('../../assets/fonts/GeosansLight.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
