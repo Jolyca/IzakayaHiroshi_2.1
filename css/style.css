@@ -11,6 +11,7 @@
 @import url('_composant/bouton.css');
 @import url('_composant/icon.css');
 @import url('_composant/ouverture.css');
+@import url('_composant/menu.css');
 
 /*[ importation du dossier _layout ]*/
 @import url('_layout/structure.css');
