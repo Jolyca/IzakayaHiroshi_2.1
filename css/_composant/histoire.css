@@ -1,0 +1,51 @@
+/*[ COMPOSANT HISTOIRE ]*/
+/* ------------------------------------------------------------ */
+
+.histoire {
+    background: var(--beigeFonce);
+    padding: 50px;
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    margin-top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.histoire p {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.histoire-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.histoire-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.histoire-img .border {
+    width: 100%;
+    height: 100%;
+    border: 5px solid black;
+    border-radius: 25%;
+    transform: rotate(25deg);
+    position: absolute;
+    z-index: 1;
+}
