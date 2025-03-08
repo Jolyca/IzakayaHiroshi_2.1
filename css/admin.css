@@ -1,0 +1,96 @@
+@font-face {
+    font-family: GeosansLight;
+    src: url(../fonts/GeosansLight.ttf);
+}
+
+body {
+    background-color: rgb(242, 232, 201);
+}
+div.menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: rgb(147, 191, 179);
+    margin: 10px;
+}
+
+div.menu p {
+    font-family: GeosansLight;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+div.menu p.name {
+    width: 800px;
+}
+
+div.menu .link {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.menu .link a {
+    font-family: GeosansLight;
+    font-weight: bold;
+    padding: 10px;
+    margin: 15px;
+}
+
+div.box {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+}
+
+h1 {
+    font-family: GeosansLight;
+    font-weight: bold;
+    font-size: 40px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h2 {
+    font-family: GeosansLight;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+
+a {
+    font-family: GeosansLight;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    border: solid black 3px;
+    text-align: center;
+}
+
+a:hover {
+    border: solid 3px rgb(191,63,63);
+    color: rgb(191,63,63);
+}
+
+a.ajoute {
+    margin-right: 9px;
+    padding: 10px;
+}
+
+div.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+}
+
+.ajoute:hover {
+    border: solid 3px rgb(191,63,63);
+    color: rgb(191,63,63);
+    
+}

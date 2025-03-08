@@ -1,0 +1,116 @@
+@font-face {
+    font-family: GeosansLight;
+    src: url(../fonts/GeosansLight.ttf);
+}
+
+body {
+    background-color: rgb(242, 232, 201);
+}
+h1 {
+    font-weight: bold;
+    font-family: GeosansLight;
+    font-size: 50px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+a.retour {
+    font-family: GeosansLight;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+    border: solid 3px black;
+    padding: 8px 20px;
+}
+
+a.retour:hover {
+    border: solid 3px rgb(191,63,63);
+    color: rgb(191,63,63);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+div.txt {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(147, 191, 179);
+    margin: 20px;
+}
+
+div.txt input {
+    width: 280px;
+    height: 25px;
+    background-color: rgb(242, 222, 196);
+}
+
+div.txt p {
+    margin-right: 20px;
+    font-family: GeosansLight;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+}
+
+div.image {
+    position: relative;
+    width: 75%;
+    background-color: rgb(147, 191, 179);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+div.image p {
+   padding-right: 40px; 
+   font-family: GeosansLight;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.bouton {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+div.bouton input
+{
+    font-family: GeosansLight;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 40px;
+    background-color: rgb(147, 191, 179);
+}
+
+div.bouton input:hover {
+    background-color: rgb(242, 153, 121);
+}
+
+div.image input[type="file"]::file-selector-button {
+    border: 3px solid rgb(57, 115, 98);
+    background-color: rgb(242, 222, 196);
+    width: 120px;
+    
+}
+div.image input[type="file"]::file-selector-button:hover {
+    background-color: rgb(242, 153, 121);
+    border: 3px solid black;
+}
+
+
