@@ -1,7 +1,6 @@
 /*[ COMPOSANT HEADER ]*/
 /* ------------------------------------------------------------ */
 
-
 .logo {
     width: 150px;
     cursor: pointer;
@@ -81,8 +80,4 @@ section.section_comunication {
     line-height: 1.5;
     margin: 20px;
     margin-bottom: 40px;
-}
-
-.navigation {
-    display: none;
 }

@@ -1,0 +1,92 @@
+/*[ COMPOSANT NAVIGATION ]*/
+/* ------------------------------------------------------------ */
+
+body.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rouge); 
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+.nav header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+/*     position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+div.vague {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+.fermer {
+    width: 25px;
+    cursor: pointer;
+}
+
+.navigation {
+    margin: 40px auto;
+}
+
+.navigation li {
+    font-family: 'Open Sans', sans-serif;
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navigation li:last-child {
+    border-bottom: 2px solid white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navigation li:first-child {
+    border-top: 2px solid white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navigation a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--rougeFonce);
+}
+
+.nav .section_comunication {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.nav .section_comunication img {
+    width: 20px;
+}
+
+.nav .telephone, .courriel {
+    display: flex;
+    gap: 10px;
+}
+
+.nav .reseaux_sociaux {
+    display: flex;
+    gap: 5px;
+}
