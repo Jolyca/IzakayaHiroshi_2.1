@@ -13,7 +13,6 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 20px;
 }
 .btn:hover {
     background-color: var(--vertFonce);

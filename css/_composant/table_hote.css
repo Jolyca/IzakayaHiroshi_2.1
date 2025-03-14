@@ -22,7 +22,7 @@
 .titre_table_hote h2 {
     color: var(--rouge);
     font-weight: lighter;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .titre_table_hote span {
@@ -34,7 +34,7 @@
 .titre_table_hote img {
     position: absolute;
     top: -30px;
-    right: 160px;
+    right: 55px;
     width: 70px;
 }
 
@@ -83,11 +83,11 @@
 }
 
 .item h3 {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 span.parPersonne {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .separateur {

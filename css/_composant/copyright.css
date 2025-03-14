@@ -1,0 +1,45 @@
+/*[ COMPOSANT COPPYRIGHT ]*/
+/* ------------------------------------------------------------ */
+
+.copyright {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 0px;
+    background-color: var(--rouge);
+    padding: 15px;
+}
+
+.reseaux_sociaux {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.reseaux_sociaux img {
+    width: 25px;
+    /* Ajuste la taille des icônes */
+    transition: transform 0.3s ease-in-out;
+}
+
+.reseaux_sociaux img:hover {
+    transform: scale(1.1);
+    /* Effet zoom au survol */
+}
+
+.retour_en_haut {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.retour_en_haut img {
+    width: 45px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.retour_en_haut img:hover {
+    transform: scale(1.1);
+}

@@ -3,8 +3,8 @@
 
 .infolettre {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     background-color: var(--orange);
     padding: 20px;
     gap: 10px;
@@ -13,7 +13,7 @@
 .infolettre h3 {
     color: white;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
 }
@@ -26,13 +26,20 @@
 }
 
 .infolettre-form {
+    display: flex;
+    align-items: center;
     background-color: white;
     border-radius: 50px;
-    overflow: hidden; 
-    margin: 20px 0;
+    margin: 20px;
     box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 .infolettre-form input {
-    margin: 0 30px;
-} 
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+}
