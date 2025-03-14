@@ -18,13 +18,11 @@
 
 .reseaux_sociaux img {
     width: 25px;
-    /* Ajuste la taille des icônes */
     transition: transform 0.3s ease-in-out;
 }
 
 .reseaux_sociaux img:hover {
     transform: scale(1.1);
-    /* Effet zoom au survol */
 }
 
 .retour_en_haut {
