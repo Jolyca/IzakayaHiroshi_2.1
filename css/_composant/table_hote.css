@@ -1,0 +1,98 @@
+/*[ COMPOSANT TABLE_HOTE ]*/
+/* ------------------------------------------------------------ */
+
+.table_hote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    padding: 20px;
+    padding-left: 40px;  
+    padding-right: 40px;
+}
+
+.titre_table_hote {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 20px;
+}
+
+.titre_table_hote h2 {
+    color: var(--rouge);
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.titre_table_hote span {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.titre_table_hote img {
+    position: absolute;
+    top: -30px;
+    right: 160px;
+    width: 70px;
+}
+
+.item div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item {
+    max-width: 600px;
+    margin: 20px auto;
+/*     padding-bottom: 20px; */
+}
+
+.item div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.item_point {
+    flex-grow: 1; /* Remplit l'espace entre le titre et le prix */
+    border-bottom: 2px dotted #D5D5D5; /* Génère les points */
+    margin: 0 10px; /* Espace autour des points */
+}
+
+.item_prix {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--rouge);
+}
+
+.item-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 20px;
+}
+
+.item h3 {
+    font-size: 18px;
+}
+
+span.parPersonne {
+    font-size: 14px;
+}
+
+.separateur {
+    width: 100%; 
+    height: 2px; 
+    background-color: #D5D5D5; 
+    margin: 20px auto; 
+}
