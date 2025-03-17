@@ -39,3 +39,18 @@ function selectById($nom_table, $id, $colonnes = "*")
     $stmt->execute([":id" => $id]);
     return $stmt->fetch();
 }
+
+function chargerImage($chemin)
+{
+    $extension = strtolower(pathinfo($chemin, PATHINFO_EXTENSION));
+    switch ($extension) 
+    {
+        case "jpg": return imagecreatefromjpeg($chemin);
+        case "jpeg": return imagecreatefromjpeg($chemin);
+        case "png": return imagecreatefrompng($chemin);
+        case "gif": return imagecreatefromgif($chemin);
+        case "avif": return imagecreatefromavif($chemin);
+        case "webp": return imagecreatefromwebp($chemin);
+        default: return false;
+    }
+}
