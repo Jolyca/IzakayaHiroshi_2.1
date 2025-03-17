@@ -4,6 +4,9 @@ include "bdd.php";
 /*
 *  Selectionne toutes les entrées
 */
+session_start();
+
+date_default_timezone_set("America/Toronto");
 
 function selectAll($nom_table, $colonnes = "*" ,$order = "")
 {
