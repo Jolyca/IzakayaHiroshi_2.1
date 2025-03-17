@@ -93,6 +93,11 @@ else
             <p>image:</p>
             <input type="file" name="image" value="<?= $plat["image"] ?>">
         </div>
+        <div class="image_existante">
+            <p>image existante</p>
+            <img src="../../<?= $plat["image"] ?>" alt="">
+
+        </div>
         <div class="bouton">
             <p>
                 <input type="submit" value="Modifier">

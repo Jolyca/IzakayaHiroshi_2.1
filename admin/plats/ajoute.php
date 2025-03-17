@@ -2,23 +2,40 @@
 
 include "../../includes/init.php";
 
-if (!empty($_POST))
-{
+if (!empty($_POST)) {
     $nom = $_POST["nom"];
     $acoter = $_POST["acoter"];
     $prix = $_POST["prix"];
     $ingredients = $_POST["ingredients"];
-    $cheminImage = null;
-    if (!empty($_FILES["image"]["name"]))
-    {
-        $dossierUpload = "../../images/";
-        $cheminImage = $dossierUpload . basename($_FILES["image"]["name"]);
 
-        if (!move_uploaded_file($_FILES["image"]["tmp_name"], $cheminImage))
+    $image = $_FILES["image"];
+    $erreur_upload = false;
+
+    if ($image["error"] == 0) {
+        $dossierUpload = "../../uploads/";
+        $nom_fichier = date("h-i-s") . "_" . random_int(100000, 999999);
+        
+        $extension = pathinfo($image["name"], PATHINFO_EXTENSION);
+
+        $cible = "$dossierUpload$nom_fichier.$extension";
+        $cible_universel = "uploads/$nom_fichier.$extension";
+        $supported_image = array('gif','jpg','jpeg','png','avif','webp');
+        if (in_array($extension, $supported_image))
         {
-            die ("File upload failed");
+            move_uploaded_file($image["tmp_name"], $cible);
+        }
+        else
+        {
+            $erreur_upload = true;
+            echo " pas un format valide";
         }
     }
+    else
+    {
+        $erreur_upload = true;
+        echo " pas un format valide";
+    }
+
 
 
     $sql = "
@@ -34,7 +51,7 @@ if (!empty($_POST))
         ":acoter" => $acoter,
         ":prix" => $prix,
         ":ingredients" => $ingredients,
-        ":image" => $cheminImage,
+        ":image" => $cible_universel,
     ]);
 
 
@@ -45,16 +62,18 @@ if (!empty($_POST))
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un repas</title>
     <link rel="stylesheet" href="../../css/ajoute.css">
-    
+
 </head>
+
 <body>
     <p>
-        <a class = "retour" href="index.php">Retour</a>
+        <a class="retour" href="index.php">Retour</a>
     </p>
     <h1>Ajouter</h1>
     <form action="" method="post" enctype="multipart/form-data">
@@ -90,4 +109,5 @@ if (!empty($_POST))
         </div>
     </form>
 </body>
+
 </html>
