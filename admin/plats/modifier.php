@@ -8,9 +8,6 @@ if (empty($_POST))
     //affichage du form
     $id = $_GET["id"];
     $plat = selectById("plats",$id);
-
-   
-
 }
 else 
 {
@@ -20,8 +17,37 @@ else
     $acoter = $_POST["acoter"];
     $prix = $_POST["prix"];
     $ingredients = $_POST["ingredients"];
-    $image = $_POST["image"];
+    $image = $_FILES["image"];
     $id = $_POST["id"];
+    
+
+
+    if (!empty($_FILES["image"]["name"])) {
+        
+        $dossierUpload = "../../uploads/";
+        $nom_fichier = date("h-i-s") . "_" . random_int(100000, 999999);
+        
+        $extension = pathinfo($image["name"], PATHINFO_EXTENSION);
+
+        $cible = "$dossierUpload$nom_fichier.$extension";
+        $cible_universel = "uploads/$nom_fichier.$extension";
+        $supported_image = array('gif','jpg','jpeg','png','avif','webp');
+
+        if (in_array($extension, $supported_image))
+        {
+            move_uploaded_file($image["tmp_name"], $cible);
+        }
+        else
+        {
+            $erreur_upload = true;
+            echo " pas un format valide";
+        }
+    }
+    else
+    {
+        $erreur_upload = true;
+        echo " pas un format valide";
+    }
 
     //toujours avoir une condition comme le delete
     $sql = "
@@ -43,7 +69,7 @@ else
         ":acoter" => $acoter,
         ":prix" => $prix,
         ":ingredients" => $ingredients,
-        ":image" => $image,
+        ":image" => $cible_universel,
     ]);
 
 
@@ -66,6 +92,7 @@ else
     </p>
     <h1>Modifier</h1>
     <form action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="existing_image" value="<?= $plat["image"] ?>">
 
         <input type="hidden" name="id" value="<?= $plat["id"] ?>">
 
@@ -91,13 +118,13 @@ else
         
         <div class="image">
             <p>image:</p>
-            <input type="file" name="image" value="<?= $plat["image"] ?>">
+            <input type="file" name="image" value="../../<?= $plat["image"] ?>">
         </div>
         <div class="image_existante">
             <p>image existante</p>
             <img src="../../<?= $plat["image"] ?>" alt="">
-
         </div>
+        
         <div class="bouton">
             <p>
                 <input type="submit" value="Modifier">

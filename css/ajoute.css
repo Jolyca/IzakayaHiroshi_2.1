@@ -113,4 +113,16 @@ div.image input[type="file"]::file-selector-button:hover {
     border: 3px solid black;
 }
 
+div.image_existante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.image_existante img {
+    object-fit: cover;
+    width: 75%;
+}
+
+
 
