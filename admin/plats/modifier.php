@@ -12,7 +12,6 @@ if (empty($_POST))
 else 
 {
     //traitement du form
-
     $nom = $_POST["nom"];
     $acoter = $_POST["acoter"];
     $prix = $_POST["prix"];
@@ -21,7 +20,6 @@ else
     $existing_image = $_POST["existing_image"];
     $id = $_POST["id"];
     
-
 
     if (!empty($_FILES["image"]["name"])) {
         
@@ -73,10 +71,8 @@ else
         ":image" => $cible_universel,
     ]);
 
-
     header("location: index.php");
 }
-
 ?>
 
 <!DOCTYPE html>
