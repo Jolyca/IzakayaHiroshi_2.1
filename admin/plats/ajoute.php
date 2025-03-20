@@ -2,6 +2,10 @@
 
 include "../../includes/init.php";
 
+if (!isset( $_SESSION["est_connecte"] )) {
+    header("location: ../connexion.php");
+}
+
 if (!empty($_POST)) {
     $nom = $_POST["nom"];
     $acoter = $_POST["acoter"];
