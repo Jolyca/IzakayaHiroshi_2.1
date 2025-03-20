@@ -16,18 +16,18 @@ if (empty($_POST))
 else 
 {
     //traitement du form
-
     $nom = $_POST["nom"];
     $acoter = $_POST["acoter"];
     $prix = $_POST["prix"];
     $ingredients = $_POST["ingredients"];
     $image = $_FILES["image"];
+    $existing_image = $_POST["existing_image"];
     $id = $_POST["id"];
     
 
-
     if (!empty($_FILES["image"]["name"])) {
         
+        $existing_image = $image;
         $dossierUpload = "../../uploads/";
         $nom_fichier = date("h-i-s") . "_" . random_int(100000, 999999);
         
@@ -49,8 +49,7 @@ else
     }
     else
     {
-        $erreur_upload = true;
-        echo " pas un format valide";
+        $cible_universel = $existing_image;
     }
 
     //toujours avoir une condition comme le delete
@@ -76,10 +75,8 @@ else
         ":image" => $cible_universel,
     ]);
 
-
     header("location: index.php");
 }
-
 ?>
 
 <!DOCTYPE html>
