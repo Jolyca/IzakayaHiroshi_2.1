@@ -1,10 +1,10 @@
 @font-face {
     font-family: GeosansLight;
-    src: url(../fonts/GeosansLight.ttf);
+    src: url(../assets/fonts/GeosansLight.ttf);
 }
 
 h1 {
-    font-family: GeosansLight;
+    font-family: "GeosansLight";
     font-size: 60px;
 }
 body {
@@ -35,6 +35,11 @@ div.pastille img {
 
 img.vin {
     margin-left: 18px;
+}
+
+img.employe
+{
+    margin-right: 4px;
 }
 
 img.livre {
