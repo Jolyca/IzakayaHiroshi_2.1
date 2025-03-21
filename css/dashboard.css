@@ -1,0 +1,81 @@
+@font-face {
+    font-family: GeosansLight;
+    src: url(../assets/fonts/GeosansLight.ttf);
+}
+
+h1 {
+    font-family: "GeosansLight";
+    font-size: 60px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(242, 232, 201);
+    
+}
+div.pastille {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: lightblue;
+}
+
+div.pastille:hover {
+    background-color: rgb(191,63,63);
+}
+
+div.pastille img {
+    width: 150px;
+    height: 150px;
+}
+
+img.vin {
+    margin-left: 18px;
+}
+
+img.employe
+{
+    margin-right: 4px;
+}
+
+img.livre {
+    margin-top: 18px;
+}
+
+a.pastille_link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+a.title {
+    font-family: GeosansLight;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+a.title:hover {
+    color: rgb(191,63,63);
+}
+
+div.bouton {
+    padding: 85px;
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
