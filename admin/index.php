@@ -28,12 +28,12 @@ if (!isset( $_SESSION["est_connecte"] )) {
             <a class="title" href="/admin/plats/index.php">Gérer les repas</a>
         </div>
         <div class="bouton">
-            <a call="pastille_link" href="/admin/plats/index.php">
+            <a call="pastille_link" href="/admin/employes/index.php">
                 <div class="pastille">
-                    <img class="vin" src="../icons/wine_1150295.png" alt="">
+                    <img class="employe" src="../icons/community_921318.png" alt="">
                 </div>
             </a>
-            <a class="title" href="/admin/plats/index.php">Gérer les vins</a>
+            <a class="title" href="/admin/employes/index.php">Gérer les employés</a>
         </div>
         <div class="bouton">
             <a call="pastille_link" href="/admin/plats/index.php">

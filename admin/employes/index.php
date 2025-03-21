@@ -7,7 +7,7 @@ if (!isset( $_SESSION["est_connecte"] )) {
 
 if (!empty($_GET["supprimer"])) {
     $sql = "
-        DELETE FROM plats
+        DELETE FROM employes
         WHERE id = :id
     ";
 
@@ -20,7 +20,7 @@ if (!empty($_GET["supprimer"])) {
 }
 
 
-$plats = selectAll("plats","*","nom ASC");
+$employes = selectAll("employes","*","nom ASC");
 ?>
 
 <!DOCTYPE html>
@@ -33,24 +33,24 @@ $plats = selectAll("plats","*","nom ASC");
 </head>
 <body>
     <div class="all">
-        <h1>Gestions des repas</h1>
+        <h1>Gestions des employés</h1>
         
         <div class="nav">
-            <h2>Liste des repas</h2>
+            <h2>Liste des employés</h2>
             
             <p>
                 <a class= "ajoute" href="ajoute.php">Ajouter un élément au menu</a>
             </p>
         </div>
         <div class="box">
-            <?php foreach ($plats as $plat): ?>
+            <?php foreach ($employes as $employe): ?>
                 <div class="menu">
-                    <p class="name"><?= $plat["nom"] ?></p>
-                    <p><?= $plat["prix"] ?></p>
-                    <!-- <img src="<?= $plat["image"]?>" alt=""> -->
+                    <p class="name"><?= $employe["nom"] ?></p>
+                    <p><?= $employe["courriel"] ?></p>
+                    <p><?= $employe["position"] ?></p>
                     <div class="link">
-                        <a href="modifier.php?id=<?= $plat["id"]?>">Modifier</a>
-                        <a href="index.php?supprimer=<?= $plat["id"]?>">Supprimer</a>
+                        <a href="modifier.php?id=<?= $employe["id"]?>">Modifier</a>
+                        <a href="index.php?supprimer=<?= $employe["id"]?>">Supprimer</a>
                     </div>
                 </div>
             <?php endforeach ?>
